@@ -2,7 +2,15 @@
 
 MCP server for accessing electronic music events from [19hz.info](https://19hz.info).
 
-## Installation
+## Quick Start
+
+Add the hosted server to Claude Desktop:
+
+```bash
+claude mcp add 19hz --transport http https://one9hz.onrender.com/mcp
+```
+
+## Local Installation
 
 ```bash
 # Install dependencies
