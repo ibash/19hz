@@ -139,9 +139,8 @@ async def check_for_new_regions() -> str:
         return f"Error checking for new regions: {str(e)}"
 
 
-# HTTP app setup (only create if running as HTTP server)
-if "--stdio" not in sys.argv:
-    app = mcp.http_app()
+# Create ASGI app for uvicorn (serves at /mcp by default)
+app = mcp.http_app()
 
 
 def main():

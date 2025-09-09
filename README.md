@@ -11,11 +11,16 @@ uv sync
 
 ## Usage
 
-### HTTP Mode (default)
+### HTTP Mode
 
 ```bash
+# Using FastMCP's built-in server
 uv run python server.py
 # Server runs at http://127.0.0.1:8000/mcp (or PORT env var if set)
+
+# Or use uvicorn directly (for network access)
+uvicorn server:app --host 0.0.0.0 --port 8000
+# Server runs at http://0.0.0.0:8000/mcp
 ```
 
 ### STDIO Mode
